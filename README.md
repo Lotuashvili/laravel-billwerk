@@ -8,6 +8,12 @@ This package provides a convenient way, to handle payments/subscription with [bi
 composer require lotuashviil/laravel-billwerk
 ```
 
+After composer installation, you can use the following commands to publish configuration:
+
+```
+php artisan vendor:publish --provider="Lotuashvili\LaravelBillwerk\LaravelBillwerkServiceProvider"
+```
+
 ## Credits
 
 - [Levan Lotuashvili](https://github.com/Lotuashvili)
