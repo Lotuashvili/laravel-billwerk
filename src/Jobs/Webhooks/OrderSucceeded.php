@@ -1,6 +1,6 @@
 <?php
 
-namespace Lefamed\LaravelBillwerk\Jobs\Webhooks;
+namespace Lotuashvili\LaravelBillwerk\Jobs\Webhooks;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
@@ -8,15 +8,15 @@ use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Support\Facades\Log;
-use Lefamed\LaravelBillwerk\Billwerk\Order;
-use Lefamed\LaravelBillwerk\Models\BillwerkCustomer;
+use Lotuashvili\LaravelBillwerk\Billwerk\Order;
+use Lotuashvili\LaravelBillwerk\Models\BillwerkCustomer;
 
 /**
  * Class OrderSucceeded
  *
  * Send order confirmation to the user.
  *
- * @package Lefamed\LaravelBillwerk\Jobs\Webhooks
+ * @package Lotuashvili\LaravelBillwerk\Jobs\Webhooks
  */
 class OrderSucceeded implements ShouldQueue
 {
@@ -62,7 +62,7 @@ class OrderSucceeded implements ShouldQueue
                 return;
             }
 
-            event(new \Lefamed\LaravelBillwerk\Events\OrderSucceeded($customer, $order));
+            event(new \Lotuashvili\LaravelBillwerk\Events\OrderSucceeded($customer, $order));
         } catch (\Exception $e) {
             Log::error($e->getMessage());
         }

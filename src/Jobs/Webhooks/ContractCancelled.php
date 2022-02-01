@@ -1,6 +1,6 @@
 <?php
 
-namespace Lefamed\LaravelBillwerk\Jobs\Webhooks;
+namespace Lotuashvili\LaravelBillwerk\Jobs\Webhooks;
 
 use Carbon\Carbon;
 use Illuminate\Bus\Queueable;
@@ -9,9 +9,9 @@ use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Support\Facades\Log;
-use Lefamed\LaravelBillwerk\Billwerk\Contract;
-use Lefamed\LaravelBillwerk\Models\BillwerkContract;
-use Lefamed\LaravelBillwerk\Models\BillwerkCustomer;
+use Lotuashvili\LaravelBillwerk\Billwerk\Contract;
+use Lotuashvili\LaravelBillwerk\Models\BillwerkContract;
+use Lotuashvili\LaravelBillwerk\Models\BillwerkCustomer;
 
 class ContractCancelled implements ShouldQueue
 {
@@ -47,7 +47,7 @@ class ContractCancelled implements ShouldQueue
                 'end_date' => Carbon::parse($contract->EndDate),
             ]);
 
-            event(new \Lefamed\LaravelBillwerk\Events\ContractCancelled($contract));
+            event(new \Lotuashvili\LaravelBillwerk\Events\ContractCancelled($contract));
         } catch (\Exception $e) {
             Log::error($e->getMessage());
         }

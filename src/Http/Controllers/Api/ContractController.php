@@ -1,18 +1,18 @@
 <?php
 
-namespace Lefamed\LaravelBillwerk\Http\Controllers\Api;
+namespace Lotuashvili\LaravelBillwerk\Http\Controllers\Api;
 
 use Carbon\Carbon;
 use Exception;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\Cache;
-use Lefamed\LaravelBillwerk\Billwerk\Contract;
-use Lefamed\LaravelBillwerk\Http\Controllers\Controller;
+use Lotuashvili\LaravelBillwerk\Billwerk\Contract;
+use Lotuashvili\LaravelBillwerk\Http\Controllers\Controller;
 
 /**
  * Class ContractController
  *
- * @package Lefamed\LaravelBillwerk\Http\Controllers\Api
+ * @package Lotuashvili\LaravelBillwerk\Http\Controllers\Api
  */
 class ContractController extends Controller
 {

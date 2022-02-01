@@ -1,6 +1,6 @@
 <?php
 
-namespace Lefamed\LaravelBillwerk\Billwerk;
+namespace Lotuashvili\LaravelBillwerk\Billwerk;
 
 use Exception;
 use GuzzleHttp\Psr7\Response;

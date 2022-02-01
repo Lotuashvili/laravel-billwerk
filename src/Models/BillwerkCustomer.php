@@ -1,20 +1,20 @@
 <?php
 
-namespace Lefamed\LaravelBillwerk\Models;
+namespace Lotuashvili\LaravelBillwerk\Models;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Str;
-use Lefamed\LaravelBillwerk\Billwerk\Customer;
-use Lefamed\LaravelBillwerk\Jobs\SyncBillwerkCustomer;
-use Lefamed\LaravelBillwerk\Transformers\Model\CustomerTransformer;
+use Lotuashvili\LaravelBillwerk\Billwerk\Customer;
+use Lotuashvili\LaravelBillwerk\Jobs\SyncBillwerkCustomer;
+use Lotuashvili\LaravelBillwerk\Transformers\Model\CustomerTransformer;
 
 /**
  * Class Customer
  *
- * @package Lefamed\LaravelBillwerk\Models
+ * @package Lotuashvili\LaravelBillwerk\Models
  */
 class BillwerkCustomer extends Model
 {

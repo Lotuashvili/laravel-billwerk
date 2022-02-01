@@ -1,13 +1,13 @@
 <?php
 
-namespace Lefamed\LaravelBillwerk\Models;
+namespace Lotuashvili\LaravelBillwerk\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
 /**
  * Class Contract
  *
- * @package Lefamed\LaravelBillwerk\Models
+ * @package Lotuashvili\LaravelBillwerk\Models
  */
 class BillwerkContract extends Model
 {

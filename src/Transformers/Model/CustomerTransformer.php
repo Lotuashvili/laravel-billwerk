@@ -1,13 +1,13 @@
 <?php
 
-namespace Lefamed\LaravelBillwerk\Transformers\Model;
+namespace Lotuashvili\LaravelBillwerk\Transformers\Model;
 
-use Lefamed\LaravelBillwerk\Models\BillwerkCustomer;
+use Lotuashvili\LaravelBillwerk\Models\BillwerkCustomer;
 
 /**
  * Class CustomerTransformer
  *
- * @package Lefamed\LaravelBillwerk\Transformers\Billwerk
+ * @package Lotuashvili\LaravelBillwerk\Transformers\Billwerk
  */
 class CustomerTransformer
 {

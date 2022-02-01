@@ -1,6 +1,6 @@
 <?php
 
-namespace Lefamed\LaravelBillwerk\Billwerk;
+namespace Lotuashvili\LaravelBillwerk\Billwerk;
 
 use Carbon\Carbon;
 use Exception;
@@ -8,7 +8,7 @@ use Exception;
 /**
  * Class Contract
  *
- * @package Lefamed\LaravelBillwerk\Billwerk
+ * @package Lotuashvili\LaravelBillwerk\Billwerk
  */
 class Contract extends BaseClient
 {

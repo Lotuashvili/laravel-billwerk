@@ -1,11 +1,11 @@
 <?php
 
-namespace Lefamed\LaravelBillwerk\Billwerk;
+namespace Lotuashvili\LaravelBillwerk\Billwerk;
 
 /**
  * Class PlanVariant
  *
- * @package Lefamed\LaravelBillwerk\Billwerk
+ * @package Lotuashvili\LaravelBillwerk\Billwerk
  */
 class PlanVariant extends BaseClient
 {

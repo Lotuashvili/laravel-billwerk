@@ -1,6 +1,6 @@
 <?php
 
-namespace Lefamed\LaravelBillwerk\Jobs\Webhooks;
+namespace Lotuashvili\LaravelBillwerk\Jobs\Webhooks;
 
 use Carbon\Carbon;
 use Illuminate\Bus\Queueable;
@@ -9,8 +9,8 @@ use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Support\Facades\Log;
-use Lefamed\LaravelBillwerk\Billwerk\Contract;
-use Lefamed\LaravelBillwerk\Models\BillwerkCustomer;
+use Lotuashvili\LaravelBillwerk\Billwerk\Contract;
+use Lotuashvili\LaravelBillwerk\Models\BillwerkCustomer;
 
 class ContractCreated implements ShouldQueue
 {
@@ -42,7 +42,7 @@ class ContractCreated implements ShouldQueue
             $res = $contractClient->get($this->contractId)->data();
 
             //check if contract already exists
-            if (\Lefamed\LaravelBillwerk\Models\BillwerkContract::find($res->Id)) {
+            if (\Lotuashvili\LaravelBillwerk\Models\BillwerkContract::find($res->Id)) {
                 return;
             }
 
@@ -55,7 +55,7 @@ class ContractCreated implements ShouldQueue
             }
 
             //customer found, continue
-            \Lefamed\LaravelBillwerk\Models\BillwerkContract::create([
+            \Lotuashvili\LaravelBillwerk\Models\BillwerkContract::create([
                 'id' => $res->Id,
                 'plan_id' => $res->PlanId,
                 'plan_variant_id' => isset($res->PlanVariantId) ? $res->PlanVariantId : null,

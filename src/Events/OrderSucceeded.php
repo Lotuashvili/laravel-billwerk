@@ -1,23 +1,23 @@
 <?php
 
-namespace Lefamed\LaravelBillwerk\Events;
+namespace Lotuashvili\LaravelBillwerk\Events;
 
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
-use Lefamed\LaravelBillwerk\Models\BillwerkCustomer;
+use Lotuashvili\LaravelBillwerk\Models\BillwerkCustomer;
 
 /**
  * Class OrderSucceeded
  *
- * @package Lefamed\LaravelBillwerk\Events
+ * @package Lotuashvili\LaravelBillwerk\Events
  */
 class OrderSucceeded
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
     /**
-     * @var \Lefamed\LaravelBillwerk\Models\BillwerkCustomer
+     * @var \Lotuashvili\LaravelBillwerk\Models\BillwerkCustomer
      */
     public $customer;
 

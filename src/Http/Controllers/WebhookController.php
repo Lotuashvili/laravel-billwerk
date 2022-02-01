@@ -1,15 +1,15 @@
 <?php
 
-namespace Lefamed\LaravelBillwerk\Http\Controllers;
+namespace Lotuashvili\LaravelBillwerk\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use Lefamed\LaravelBillwerk\Events\RecurringBillingApproaching;
-use Lefamed\LaravelBillwerk\Jobs\Webhooks\ContractCancelled;
-use Lefamed\LaravelBillwerk\Jobs\Webhooks\ContractChanged;
-use Lefamed\LaravelBillwerk\Jobs\Webhooks\ContractCreated;
-use Lefamed\LaravelBillwerk\Jobs\Webhooks\CustomerChanged;
-use Lefamed\LaravelBillwerk\Jobs\Webhooks\OrderSucceeded;
+use Lotuashvili\LaravelBillwerk\Events\RecurringBillingApproaching;
+use Lotuashvili\LaravelBillwerk\Jobs\Webhooks\ContractCancelled;
+use Lotuashvili\LaravelBillwerk\Jobs\Webhooks\ContractChanged;
+use Lotuashvili\LaravelBillwerk\Jobs\Webhooks\ContractCreated;
+use Lotuashvili\LaravelBillwerk\Jobs\Webhooks\CustomerChanged;
+use Lotuashvili\LaravelBillwerk\Jobs\Webhooks\OrderSucceeded;
 
 /**
  * Class WebhookController

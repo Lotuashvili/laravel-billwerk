@@ -1,6 +1,6 @@
 <?php
 
-namespace Lefamed\LaravelBillwerk\Events;
+namespace Lotuashvili\LaravelBillwerk\Events;
 
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Foundation\Events\Dispatchable;
@@ -9,7 +9,7 @@ use Illuminate\Queue\SerializesModels;
 /**
  * Class RecurringBillingApproaching
  *
- * @package Lefamed\LaravelBillwerk\Events
+ * @package Lotuashvili\LaravelBillwerk\Events
  */
 class RecurringBillingApproaching
 {

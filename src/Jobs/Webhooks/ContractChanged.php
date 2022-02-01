@@ -1,6 +1,6 @@
 <?php
 
-namespace Lefamed\LaravelBillwerk\Jobs\Webhooks;
+namespace Lotuashvili\LaravelBillwerk\Jobs\Webhooks;
 
 use Carbon\Carbon;
 use Exception;
@@ -10,10 +10,10 @@ use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Support\Facades\Log;
-use Lefamed\LaravelBillwerk\Billwerk\Contract;
-use Lefamed\LaravelBillwerk\Events\UpOrDowngrade;
-use Lefamed\LaravelBillwerk\Models\BillwerkContract;
-use Lefamed\LaravelBillwerk\Models\BillwerkCustomer;
+use Lotuashvili\LaravelBillwerk\Billwerk\Contract;
+use Lotuashvili\LaravelBillwerk\Events\UpOrDowngrade;
+use Lotuashvili\LaravelBillwerk\Models\BillwerkContract;
+use Lotuashvili\LaravelBillwerk\Models\BillwerkCustomer;
 
 class ContractChanged implements ShouldQueue
 {

@@ -1,18 +1,18 @@
 <?php
 
-namespace Lefamed\LaravelBillwerk\Http\Controllers\Api;
+namespace Lotuashvili\LaravelBillwerk\Http\Controllers\Api;
 
 use Exception;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use Lefamed\LaravelBillwerk\Billwerk\Order;
-use Lefamed\LaravelBillwerk\Http\Controllers\Controller;
+use Lotuashvili\LaravelBillwerk\Billwerk\Order;
+use Lotuashvili\LaravelBillwerk\Http\Controllers\Controller;
 
 /**
  * Class OrderController
  *
- * @package Lefamed\LaravelBillwerk\Http\Controllers\Api
+ * @package Lotuashvili\LaravelBillwerk\Http\Controllers\Api
  */
 class OrderController extends Controller
 {

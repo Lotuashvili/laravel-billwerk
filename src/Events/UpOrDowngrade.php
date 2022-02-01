@@ -1,16 +1,16 @@
 <?php
 
-namespace Lefamed\LaravelBillwerk\Events;
+namespace Lotuashvili\LaravelBillwerk\Events;
 
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
-use Lefamed\LaravelBillwerk\Models\BillwerkContract;
+use Lotuashvili\LaravelBillwerk\Models\BillwerkContract;
 
 /**
  * Class UpOrDowngrade
  *
- * @package Lefamed\LaravelBillwerk\Events
+ * @package Lotuashvili\LaravelBillwerk\Events
  */
 class UpOrDowngrade
 {

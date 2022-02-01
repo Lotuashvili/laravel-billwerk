@@ -1,11 +1,11 @@
 <?php
 
-namespace Lefamed\LaravelBillwerk\Billwerk;
+namespace Lotuashvili\LaravelBillwerk\Billwerk;
 
 /**
  * Class Plan
  *
- * @package Lefamed\LaravelBillwerk\Billwerk
+ * @package Lotuashvili\LaravelBillwerk\Billwerk
  */
 class Plan extends BaseClient
 {

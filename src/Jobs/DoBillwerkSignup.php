@@ -1,6 +1,6 @@
 <?php
 
-namespace Lefamed\LaravelBillwerk\Jobs;
+namespace Lotuashvili\LaravelBillwerk\Jobs;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
@@ -8,12 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
-use Lefamed\LaravelBillwerk\Models\BillwerkCustomer;
+use Lotuashvili\LaravelBillwerk\Models\BillwerkCustomer;
 
 /**
  * Class Signup
  *
- * @package Lefamed\LaravelBillwerk\Jobs
+ * @package Lotuashvili\LaravelBillwerk\Jobs
  */
 class DoBillwerkSignup implements ShouldQueue
 {

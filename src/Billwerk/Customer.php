@@ -1,13 +1,13 @@
 <?php
 
-namespace Lefamed\LaravelBillwerk\Billwerk;
+namespace Lotuashvili\LaravelBillwerk\Billwerk;
 
 use Exception;
 
 /**
  * Class Customer
  *
- * @package Lefamed\LaravelBillwerk\Billwerk
+ * @package Lotuashvili\LaravelBillwerk\Billwerk
  */
 class Customer extends BaseClient
 {

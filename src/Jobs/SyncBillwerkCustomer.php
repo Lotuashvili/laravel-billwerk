@@ -1,19 +1,19 @@
 <?php
 
-namespace Lefamed\LaravelBillwerk\Jobs;
+namespace Lotuashvili\LaravelBillwerk\Jobs;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
-use Lefamed\LaravelBillwerk\Models\BillwerkCustomer;
-use Lefamed\LaravelBillwerk\Transformers\Model\CustomerTransformer;
+use Lotuashvili\LaravelBillwerk\Models\BillwerkCustomer;
+use Lotuashvili\LaravelBillwerk\Transformers\Model\CustomerTransformer;
 
 /**
  * Class SyncBillwerkCustomer
  *
- * @package Lefamed\LaravelBillwerk\Jobs
+ * @package Lotuashvili\LaravelBillwerk\Jobs
  */
 class SyncBillwerkCustomer implements ShouldQueue
 {
@@ -41,7 +41,7 @@ class SyncBillwerkCustomer implements ShouldQueue
      */
     public function handle()
     {
-        $customerClient = new \Lefamed\LaravelBillwerk\Billwerk\Customer();
+        $customerClient = new \Lotuashvili\LaravelBillwerk\Billwerk\Customer();
         $customerClient->put(
             $this->customer->billwerk_id,
             (new CustomerTransformer())->transform($this->customer)

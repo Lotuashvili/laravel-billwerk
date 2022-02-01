@@ -1,6 +1,6 @@
 <?php
 
-namespace Lefamed\LaravelBillwerk;
+namespace Lotuashvili\LaravelBillwerk;
 
 use Illuminate\Support\ServiceProvider;
 

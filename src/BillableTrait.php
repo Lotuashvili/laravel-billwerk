@@ -1,18 +1,18 @@
 <?php
 
-namespace Lefamed\LaravelBillwerk;
+namespace Lotuashvili\LaravelBillwerk;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Collection;
-use Lefamed\LaravelBillwerk\Jobs\DoBillwerkSignup;
-use Lefamed\LaravelBillwerk\Models\BillwerkCustomer;
+use Lotuashvili\LaravelBillwerk\Jobs\DoBillwerkSignup;
+use Lotuashvili\LaravelBillwerk\Models\BillwerkCustomer;
 
 /**
  * Trait Billable
  *
  * This trait makes an other object (like User Objekt) billable.
  *
- * @package Lefamed\LaravelBillwerk\Trait
+ * @package Lotuashvili\LaravelBillwerk\Trait
  */
 trait BillableTrait
 {
