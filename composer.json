@@ -1,9 +1,12 @@
 {
-  "name": "apicore-engineering/laravel-billwerk",
+  "name": "lotuashvili/laravel-billwerk",
   "description": "This package provides a convenient way, to handle payments/subscription with billwerk.io",
   "license": "MIT",
   "authors": [
     {
+      "name": "Levan Lotuashvili",
+      "email": "l.lotuashvili@gmail.com"
+    },{
       "name": "Oliver Brunsmann",
       "email": "brunsmann@lefamed.de"
     },
