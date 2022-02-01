@@ -4,12 +4,13 @@ This package provides a convenient way, to handle payments/subscription with [bi
 
 ## Installation
 ```
-composer require apicore-engineering/laravel-billwerk
+composer require lotuashviil/laravel-billwerk
 ```
 
 
 ## Credits
 
+- [Levan Lotuashvili](https://github.com/Lotuashvili)
 - [Oliver Brunsmann](https://github.com/obrunsmann)
 - [Bence Gazder](https://github.com/gazben)
 
