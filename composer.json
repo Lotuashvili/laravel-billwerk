@@ -22,13 +22,13 @@
   },
   "autoload": {
     "psr-4": {
-      "Lefamed\\LaravelBillwerk\\": "src/"
+      "Lotuashvili\\LaravelBillwerk\\": "src/"
     }
   },
   "extra": {
     "laravel": {
       "providers": [
-        "Lefamed\\LaravelBillwerk\\LaravelBillwerkServiceProvider"
+        "Lotuashvili\\LaravelBillwerk\\LaravelBillwerkServiceProvider"
       ]
     }
   }
