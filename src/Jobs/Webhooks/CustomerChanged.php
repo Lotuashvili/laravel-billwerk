@@ -4,27 +4,28 @@ namespace Lefamed\LaravelBillwerk\Jobs\Webhooks;
 
 use Exception;
 use Illuminate\Bus\Queueable;
-use Illuminate\Queue\SerializesModels;
-use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
+use Illuminate\Queue\InteractsWithQueue;
+use Illuminate\Queue\SerializesModels;
 use Lefamed\LaravelBillwerk\Billwerk\Customer;
 use Lefamed\LaravelBillwerk\Models\BillwerkCustomer;
 
 class CustomerChanged implements ShouldQueue
 {
-	use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
+    use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
-	private $customerId;
+    private $customerId;
 
-	/**
-	 * Create a new job instance.
-	 * @param string $customerId
-	 */
-	public function __construct(string $customerId)
-	{
-		$this->customerId = $customerId;
-	}
+    /**
+     * Create a new job instance.
+     *
+     * @param string $customerId
+     */
+    public function __construct(string $customerId)
+    {
+        $this->customerId = $customerId;
+    }
 
     /**
      * Execute the job.
@@ -32,9 +33,9 @@ class CustomerChanged implements ShouldQueue
      * @return void
      * @throws Exception
      */
-	public function handle()
-	{
-		$customerClient = new Customer();
+    public function handle()
+    {
+        $customerClient = new Customer();
         $customer = $customerClient->get($this->customerId)->data();
 
         BillwerkCustomer::where('billwerk_id', $this->customerId)->update([
@@ -51,7 +52,7 @@ class CustomerChanged implements ShouldQueue
             'house_number' => $customer->Address->HouseNumber ?? '',
             'postal_code' => $customer->Address->PostalCode ?? '',
             'city' => $customer->Address->City ?? '',
-            'country' => $customer->Address->Country ?? ''
+            'country' => $customer->Address->Country ?? '',
         ]);
-	}
+    }
 }

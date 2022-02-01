@@ -2,8 +2,8 @@
 
 namespace Lefamed\LaravelBillwerk\Billwerk;
 
-use Exception;
 use Carbon\Carbon;
+use Exception;
 
 /**
  * Class Contract
@@ -12,59 +12,63 @@ use Carbon\Carbon;
  */
 class Contract extends BaseClient
 {
-	protected $resource = 'Contracts';
+    protected $resource = 'Contracts';
 
     /**
      * @param $contractId
+     *
      * @return ApiResponse
      * @throws Exception
      */
-	public function selfServiceToken($contractId): ApiResponse
-	{
-		return $this->get($contractId, 'SelfServiceToken');
-	}
+    public function selfServiceToken($contractId): ApiResponse
+    {
+        return $this->get($contractId, 'SelfServiceToken');
+    }
 
     /**
      * @param $contractId
+     *
      * @return ApiResponse
      * @throws Exception
      */
     public function subscriptions($contractId): ApiResponse
-	{
-		return $this->get($contractId, 'ComponentSubscriptions');
-	}
+    {
+        return $this->get($contractId, 'ComponentSubscriptions');
+    }
 
     /**
      * @param $subscriptionId
+     *
      * @return ApiResponse
      * @throws Exception
      */
     public function endComponentSubscription($subscriptionId): ApiResponse
-	{
-		$route = $this->baseUrl.'ComponentSubscriptions/'.$subscriptionId;
-		$options = $this->buildOptions();
+    {
+        $route = $this->baseUrl . 'ComponentSubscriptions/' . $subscriptionId;
+        $options = $this->buildOptions();
 
-		$options['json'] = [
-			'Id' => $subscriptionId,
-			'EndDate' => Carbon::now()->toIso8601String(),
-		];
+        $options['json'] = [
+            'Id' => $subscriptionId,
+            'EndDate' => Carbon::now()->toIso8601String(),
+        ];
 
-		/** @noinspection PhpParamsInspection */
-		return new ApiResponse($this->httpClient->put($route, $options));
-	}
+        /** @noinspection PhpParamsInspection */
+        return new ApiResponse($this->httpClient->put($route, $options));
+    }
 
     /**
      * @param $contractId
      * @param $componentId
      * @param $quantity
+     *
      * @return ApiResponse
      * @throws Exception
      */
-	public function reportComponentSubscription($contractId, $componentId, $quantity): ApiResponse
-	{
-		return $this->post([
-			'ComponentId' => $componentId,
-			'Quantity' => $quantity,
-		], null, $contractId.'/ComponentSubscriptions');
-	}
+    public function reportComponentSubscription($contractId, $componentId, $quantity): ApiResponse
+    {
+        return $this->post([
+            'ComponentId' => $componentId,
+            'Quantity' => $quantity,
+        ], null, $contractId . '/ComponentSubscriptions');
+    }
 }

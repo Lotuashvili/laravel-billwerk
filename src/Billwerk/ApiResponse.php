@@ -24,6 +24,7 @@ class ApiResponse
      * ApiResponse constructor.
      *
      * @param Response $response
+     *
      * @throws Exception
      */
     public function __construct(Response $response)
@@ -33,7 +34,7 @@ class ApiResponse
         }
 
         $this->response = $response;
-        $this->body = json_decode((string)$response->getBody());
+        $this->body = json_decode((string) $response->getBody());
     }
 
     /**
@@ -56,10 +57,10 @@ class ApiResponse
         //hack for collection access to findOne
         if (!is_array($this->body)) {
             $this->body = [$this->body];
+
             return collect($this->body)->first();
         }
 
         return collect($this->body);
     }
-
 }

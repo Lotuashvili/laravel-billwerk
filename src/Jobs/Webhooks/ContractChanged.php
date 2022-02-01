@@ -2,14 +2,14 @@
 
 namespace Lefamed\LaravelBillwerk\Jobs\Webhooks;
 
-use Exception;
 use Carbon\Carbon;
+use Exception;
 use Illuminate\Bus\Queueable;
-use Illuminate\Support\Facades\Log;
-use Illuminate\Queue\SerializesModels;
-use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
+use Illuminate\Queue\InteractsWithQueue;
+use Illuminate\Queue\SerializesModels;
+use Illuminate\Support\Facades\Log;
 use Lefamed\LaravelBillwerk\Billwerk\Contract;
 use Lefamed\LaravelBillwerk\Events\UpOrDowngrade;
 use Lefamed\LaravelBillwerk\Models\BillwerkContract;
@@ -49,6 +49,7 @@ class ContractChanged implements ShouldQueue
             if (isset($res->EndDate) && Carbon::parse($res->EndDate)->isPast()) {
                 // contract has ended, remove it
                 $contract->delete();
+
                 return;
             }
 

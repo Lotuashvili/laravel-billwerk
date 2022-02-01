@@ -6,26 +6,27 @@ use Illuminate\Database\Eloquent\Model;
 
 /**
  * Class Contract
+ *
  * @package Lefamed\LaravelBillwerk\Models
  */
 class BillwerkContract extends Model
 {
-	public $incrementing = false;
+    public $incrementing = false;
 
-	protected $fillable = [
-		'id',
-		'customer_id',
-		'plan_id',
-		'plan_variant_id',
-		'end_date',
-		'reference_code'
-	];
+    protected $fillable = [
+        'id',
+        'customer_id',
+        'plan_id',
+        'plan_variant_id',
+        'end_date',
+        'reference_code',
+    ];
 
-	/**
-	 * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-	 */
-	public function customer()
-	{
-		return $this->belongsTo(BillwerkCustomer::class);
-	}
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function customer()
+    {
+        return $this->belongsTo(BillwerkCustomer::class);
+    }
 }
