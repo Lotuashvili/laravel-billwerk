@@ -22,7 +22,7 @@ trait BillableTrait
     public static function bootBillableTrait()
     {
         static::created(function (Model $model) {
-            if (config('laravel-billwerk.sync')) {
+            if (config('billwerk.sync')) {
                 dispatch(new DoBillwerkSignup($model));
             }
         });

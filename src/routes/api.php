@@ -2,8 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::prefix(config('laravel-billwerk.prefix', 'admin'))
-    ->middleware(config('laravel-billwerk.middleware'))
+Route::prefix(config('billwerk.prefix', 'admin'))
+    ->middleware(config('billwerk.middleware'))
     ->group(function () {
         Route::post('/billwerk/webhook', 'WebhookController@handle');
 

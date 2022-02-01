@@ -77,7 +77,7 @@ class BillwerkCustomer extends Model
 
         // On Create Event
         static::creating(function ($values) {
-            if (config('laravel-billwerk.sync') === false) {
+            if (config('billwerk.sync') === false) {
                 $values['billwerk_id'] = Str::random(24);
 
                 return;
@@ -90,7 +90,7 @@ class BillwerkCustomer extends Model
 
         // On Update Event
         static::updated(function (BillwerkCustomer $customer) {
-            if (config('laravel-billwerk.sync') === false) {
+            if (config('billwerk.sync') === false) {
                 return;
             }
 

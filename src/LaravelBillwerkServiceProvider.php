@@ -17,7 +17,7 @@ class LaravelBillwerkServiceProvider extends ServiceProvider
         $this->loadRoutesFrom(__DIR__ . '/routes.php');
 
         $this->publishes([
-            __DIR__ . '/resources/config/laravel-billwerk.php' => config_path('laravel-billwerk.php'),
+            __DIR__ . '/resources/config/billwerk.php' => config_path('billwerk.php'),
         ]);
     }
 

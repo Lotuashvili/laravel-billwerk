@@ -48,11 +48,11 @@ abstract class BaseClient
     {
         $this->httpClient = new Client;
 
-        $this->baseUrl = config('laravel-billwerk.api.baseUrl');
-        $this->authUrl = config('laravel-billwerk.api.authUrl');
+        $this->baseUrl = config('billwerk.api.baseUrl');
+        $this->authUrl = config('billwerk.api.authUrl');
 
-        if (Cache::has(config('laravel-billwerk.auth.token_cache_key'))) {
-            $this->accessToken = Cache::get(config('laravel-billwerk.auth.token_cache_key'));
+        if (Cache::has(config('billwerk.auth.token_cache_key'))) {
+            $this->accessToken = Cache::get(config('billwerk.auth.token_cache_key'));
         }
 
         if (is_null($this->accessToken)) {
@@ -71,15 +71,15 @@ abstract class BaseClient
         $res = $this->httpClient->post($this->authUrl, [
             'form_params' => [
                 'grant_type' => 'client_credentials',
-                'client_id' => config('laravel-billwerk.auth.client_id'),
-                'client_secret' => config('laravel-billwerk.auth.client_secret'),
+                'client_id' => config('billwerk.auth.client_id'),
+                'client_secret' => config('billwerk.auth.client_secret'),
             ],
         ]);
 
         if ($res->getStatusCode() === 200) {
             //store access token on cache
             $body = json_decode($res->getBody());
-            Cache::put(config('laravel-billwerk.auth.token_cache_key'), $body->access_token, 60 * 24);
+            Cache::put(config('billwerk.auth.token_cache_key'), $body->access_token, 60 * 24);
             $this->accessToken = $body->access_token;
         } else {
             Log::error($res->getBody());
